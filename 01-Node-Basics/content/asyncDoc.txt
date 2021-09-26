@@ -1,0 +1,6 @@
+here we are in callback and concatenating the fist and second text file and saving to new text file : first text file:
+         you can read this file by using file system module and readFileSync
+
+first text file is here buddy and second text file is you can read this file by using file system module and readFileSync
+
+second text file is here  

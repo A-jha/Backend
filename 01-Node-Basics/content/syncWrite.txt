@@ -1,0 +1,61 @@
+This file is Created using writeFileSync function and not 
+ manually buddy and it contains first.txt : you can read this file by using file system module and readFileSync
+
+first text file is here buddy and second.txt: you can read this file by using file system module and readFileSync
+
+second text file is here  This file is Created using writeFileSync function and not 
+ manually buddy and it contains first.txt : you can read this file by using file system module and readFileSync
+
+first text file is here buddy and second.txt: you can read this file by using file system module and readFileSync
+
+second text file is here  This file is Created using writeFileSync function and not 
+ manually buddy and it contains first.txt : you can read this file by using file system module and readFileSync
+
+first text file is here buddy and second.txt: you can read this file by using file system module and readFileSync
+
+second text file is here  This file is Created using writeFileSync function and not 
+ manually buddy and it contains first.txt : you can read this file by using file system module and readFileSync
+
+first text file is here buddy and second.txt: you can read this file by using file system module and readFileSync
+
+second text file is here  This file is Created using writeFileSync function and not 
+ manually buddy and it contains first.txt : you can read this file by using file system module and readFileSync
+
+first text file is here buddy and second.txt: you can read this file by using file system module and readFileSync
+
+second text file is here  This file is Created using writeFileSync function and not 
+ manually buddy and it contains first.txt : you can read this file by using file system module and readFileSync
+
+first text file is here buddy and second.txt: you can read this file by using file system module and readFileSync
+
+second text file is here  This file is Created using writeFileSync function and not 
+ manually buddy and it contains first.txt : you can read this file by using file system module and readFileSync
+
+first text file is here buddy and second.txt: you can read this file by using file system module and readFileSync
+
+second text file is here  This file is Created using writeFileSync function and not 
+ manually buddy and it contains first.txt : you can read this file by using file system module and readFileSync
+
+first text file is here buddy and second.txt: you can read this file by using file system module and readFileSync
+
+second text file is here  This file is Created using writeFileSync function and not 
+ manually buddy and it contains first.txt : you can read this file by using file system module and readFileSync
+
+first text file is here buddy and second.txt: you can read this file by using file system module and readFileSync
+
+second text file is here  This file is Created using writeFileSync function and not 
+ manually buddy and it contains first.txt : you can read this file by using file system module and readFileSync
+
+first text file is here buddy and second.txt: you can read this file by using file system module and readFileSync
+
+second text file is here  This file is Created using writeFileSync function and not 
+ manually buddy and it contains first.txt : you can read this file by using file system module and readFileSync
+
+first text file is here buddy and second.txt: you can read this file by using file system module and readFileSync
+
+second text file is here  This file is Created using writeFileSync function and not 
+ manually buddy and it contains first.txt : you can read this file by using file system module and readFileSync
+
+first text file is here buddy and second.txt: you can read this file by using file system module and readFileSync
+
+second text file is here  

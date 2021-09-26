@@ -1,0 +1,13 @@
+{
+  "name": "01-node-basics",
+  "version": "1.0.0",
+  "description": "Basics Of Node",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "dev":"node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
