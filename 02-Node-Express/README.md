@@ -39,4 +39,87 @@ To Create a Basic Server we need to import `http` module first and then we have 
 
 Now We are cleared all the basics of http and ready to move to next topic that is express and nodejs
 
-## 2. Express Server
+## 2. Express Server Basics
+
+Express is a minimal and flexible Node.js web application framework that provides a robust set of features for web and mobile applications.
+
+1. To get started with express we first have to install express
+
+```npm
+npm install express --save
+```
+
+2. Import express and make an instance of express normally called as app
+
+   ```js
+   const app = express();
+   ```
+
+   - Here as we instantiated express we just created a server and now we can directly write our routes
+
+3. Create routes
+   ```js
+   app.get("/", (req, res) => {
+     res.status(200).send("<h1>This is home</h1>");
+   });
+   ```
+4. Create a route for 404
+
+   ```js
+   app.get("*", (req, res) => {
+     res.send(404).send("<h1>Sorry page not found 404!</h1>");
+   });
+   ```
+
+5. Assign a post to listen to
+
+   ```js
+   app.listen(5000, () => {
+     console.log(`here you can specify the link`);
+   });
+   ```
+
+   🔥 we just created a very cute express app
+   for [more](./03-express-basics.js)
+
+## 3. Express Middleware for using Static files
+
+In http we used readFileSync to read the files and then send them as response body but express provides us a way to define a middleware such that we can tell express app that all of our static file is in some directory and we just have to use the path
+
+1. To setup a middleware we have to use
+
+   ```js
+   app.use(express.static("./public"));
+   ```
+
+2. Now we can use all the static file inside static folder
+
+   ```js
+   res.sendFile(path.resolve(__dirname, "./index.html"));
+   ```
+
+3. To handle the error we have new method in app
+
+   ```js
+   app.all("*", (req, res) => {
+     res.status(404).send("sorry page not found");
+   });
+   ```
+
+## 4. Express and Json Data
+
+In express to send json data there is a method called as `res.json`
+
+1. We need to import the json data and then we have to send it as response
+   ```js
+   res.status(200).json(data);
+   ```
+
+## 5. Query Parameters
+
+Query parameters are a defined set of parameters attached to the end of a url. They are extensions of the URL that are used to help define specific content
+
+> http://127.0.0.1:8000/items/?skip=0&limit=10
+
+- Here skip and limit is a query parameter
+- these prams are used to access the data as we want
