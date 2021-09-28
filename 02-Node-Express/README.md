@@ -123,3 +123,17 @@ Query parameters are a defined set of parameters attached to the end of a url. T
 
 - Here skip and limit is a query parameter
 - these prams are used to access the data as we want
+
+1. To set Query Prams we just have to add special syntax
+
+   ```js
+   app.get("/api/students/   :studentID", (req, res) => {
+     const { studentID } = req.prams;
+   });
+   ```
+
+2. To access the query prams the method is
+
+## 6. Express Middleware
+
+As in name middle comes it is a function comes between request and response

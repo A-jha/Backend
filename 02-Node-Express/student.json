@@ -1,9 +1,116 @@
 [
-   { "name":"Avinash","stream":"Infomation Tech"},
-   {"name":"Sam","stream":"Infomation Tech"},
-   {"name":"Sharma","stream":"Infomation Tech"},
-   {"name":"Verma","stream":"Electronics Tech"},
-   {"name":"Rachna","stream":"Electronics Tech"},
-   {"name":"Arpita","stream":"Electronics Tech"}
-
+   {
+      "id": 0,
+      "name": "Avinash",
+      "stream": "Infomation Tech",
+      "posts": [
+         {
+            "id": 1,
+            "post": "Hello guys keep calm"
+         },
+         {
+            "id": 2,
+            "post": "Don't be sad i am glad"
+         },
+         {
+            "id": 3,
+            "post": "you are my sunshine"
+         }
+      ]
+   },
+   {
+      "id": 1,
+      "name": "Sam",
+      "stream": "Infomation Tech",
+      "posts": [
+         {
+            "id": 1,
+            "post": "Hello guys keep calm"
+         },
+         {
+            "id": 2,
+            "post": "Don't be sad i am glad"
+         },
+         {
+            "id": 3,
+            "post": "you are my sunshine"
+         }
+      ]
+   },
+   {
+      "id": 2,
+      "name": "Sharma",
+      "stream": "Infomation Tech",
+      "posts": [
+         {
+            "id": 1,
+            "post": "Hello guys keep calm"
+         },
+         {
+            "id": 2,
+            "post": "Don't be sad i am glad"
+         },
+         {
+            "id": 3,
+            "post": "you are my sunshine"
+         }
+      ]
+   },
+   {
+      "id": 3,
+      "name": "Verma",
+      "stream": "Electronics Tech",
+      "posts": [
+         {
+            "id": 1,
+            "post": "Hello guys keep calm"
+         },
+         {
+            "id": 2,
+            "post": "Don't be sad i am glad"
+         },
+         {
+            "id": 3,
+            "post": "you are my sunshine"
+         }
+      ]
+   },
+   {
+      "id": 4,
+      "name": "Rachna ",
+      "stream": "Electronics Tech",
+      "posts": [
+         {
+            "id": 1,
+            "post": "Hello guys keep calm"
+         },
+         {
+            "id": 2,
+            "post": "Don't be sad i am glad"
+         },
+         {
+            "id": 3,
+            "post": "you are my sunshine"
+         }
+      ]
+   },
+   {
+      "id": 5,
+      "name": "Arpita Das",
+      "stream": "Electronics Tech",
+      "posts": [
+         {
+            "id": 1,
+            "post": "Hello guys keep calm"
+         },
+         {
+            "id": 2,
+            "post": "Don't be sad i am glad"
+         },
+         {
+            "id": 3,
+            "post": "you are my sunshine"
+         }
+      ]
+   }
 ]
