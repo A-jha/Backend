@@ -134,6 +134,56 @@ Query parameters are a defined set of parameters attached to the end of a url. T
 
 2. To access the query prams the method is
 
-## 6. Express Middleware
+## 6. Express Middleware use method
 
 As in name middle comes it is a function comes between request and response
+
+1. write the method to be used as middleware and then call next();
+
+   ```js
+   const mw = (req, res, next) => {
+     const method = req.method;
+     console.log(method);
+     next();
+   };
+   ```
+
+   - 🌄 **If you will not call next inside your middleware then page will never load**
+
+2. To use the middleware you have to use the method provided by express to use it
+
+   ```js
+   app.use([mw]);
+   //then the logic
+   ```
+
+3. Middleware will work for those routes which is below it those routes which is above it will go without middleware
+
+   ```js
+   app.get("/", (req, res) => {
+     res.send("it will run without using middleware");
+   });
+   app.use([mw]);
+   app.get("/about", (req, res) => {
+     res.send("this will run after the execution of middleware");
+   });
+   ```
+
+## 7. Express and Morgan
+
+Morgan is a logger which gives developer an insight of what is the request and many more
+
+1. install morgan from npm
+
+   ```
+   npm i morgan
+   ```
+
+2. import morgan and add it as middleware
+
+   ```js
+   const morgan = require("morgan");
+   app.use(morgan("tiny"));
+   ```
+
+## 8. Express Methods
