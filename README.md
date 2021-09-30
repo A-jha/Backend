@@ -23,6 +23,10 @@
 
 - Expressjs [x]
 
+- ejs
+
+- Redux
+
 - GraphQL
 
 ## Backend Stack
