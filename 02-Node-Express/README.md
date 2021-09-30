@@ -186,4 +186,49 @@ Morgan is a logger which gives developer an insight of what is the request and m
    app.use(morgan("tiny"));
    ```
 
-## 8. Express Methods
+## 8. Express and Forms
+
+Working with form using express is easy.
+
+1. Express provides us the method `urlencoded` to parse the data from the html form
+
+   ```js
+   app.use(express.urlencoded({ extended: false }));
+   ```
+
+2. We can set action of form to the route
+
+   ```html
+   <form action="http://localhost:5000/form" method="POST">
+     <--- Input and Labels ---!>
+   </form>
+   ```
+
+3. To fetch the data of the post method we have to fetch req.body
+
+   ```js
+   const { name, email, password } = res.body;
+   ```
+
+4. We can hash our password before pushing it into database
+
+   ```
+   npm i bcrypt
+   ```
+
+   - No bcrypt is a function which can take some time to behave the logic properly we should declare the function async and then add wait during hashing the password
+
+     ```js
+     const bcrypt = require("bcrypt");
+     const hashedPassword = async (password) => {
+       const saltRounds = 10;
+       return await bcrypt.hash(password, saltRound);
+     };
+     ```
+
+## 9. Express Methods
+
+- get
+- put
+- post
+- delete
