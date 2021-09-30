@@ -19,9 +19,9 @@
 
 ## Topics and Where to Look
 
-- Nodejs
+- Nodejs [x]
 
-- Expressjs
+- Expressjs [x]
 
 - GraphQL
 
