@@ -1,7 +1,14 @@
 <div class="card m-2 p-4">
   <div class="pb-2">
     <label for="title">Title</label>
-    <input required class="p-2 w-100" type="text" name="title" id="title" />
+    <input
+      required
+      class="p-2 w-100"
+      type="text"
+      name="title"
+      id="title"
+      value="<%= article.title %> "
+    />
   </div>
   <div class="pb-2">
     <label for="description">Description</label>
@@ -12,7 +19,9 @@
       type="text"
       name="description"
       id="description"
-    ></textarea>
+    >
+    <%= article.description %> 
+    </textarea>
   </div>
   <div class="pb-2">
     <label for="markdown">Markdown</label>
@@ -22,10 +31,12 @@
       type="text"
       name="markdown"
       id="markdown"
-    ></textarea>
+    >
+    <%= article.markdown %> 
+    </textarea>
   </div>
   <div class="pb-2 mt-3">
-    <button class="btn btn-outline-dark" href="/articles">Cancel</button>
+    <a class="btn btn-outline-dark" href="/">Cancel</a>
     <button class="btn btn-primary" type="submit">Save</button>
   </div>
 </div>
