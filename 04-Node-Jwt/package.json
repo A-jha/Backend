@@ -1,0 +1,19 @@
+{
+  "name": "04-node-jwt",
+  "version": "1.0.0",
+  "description": "<div align=\"center\"> <img src=\"https://jwt.io/img/logo-asset.svg\" height=\"100\" alt=\"jwt\"/> <h1>Nodejs and JWT</h1> </div>",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.0.8"
+  }
+}

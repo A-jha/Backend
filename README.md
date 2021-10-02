@@ -23,7 +23,9 @@
 
 - Expressjs [x]
 
-- ejs
+- ejs [x]
+
+- JWT [x]
 
 - Redux
 
