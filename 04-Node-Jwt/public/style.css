@@ -2,7 +2,6 @@
   margin: 0;
   padding: 0;
 }
-body {
-  font-family: "Courier New", Courier, monospace;
-  background: #1ff;
+.main {
+  min-height: 80vh;
 }

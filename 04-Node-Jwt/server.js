@@ -9,7 +9,7 @@ const mongoose = require("mongoose");
 const ejs = require("ejs");
 
 //set static file
-app.use(express.static("public"));
+app.use(express.static("./public"));
 
 //set view engine as ejs
 app.set("view engine", "ejs");
