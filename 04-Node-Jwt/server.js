@@ -43,23 +43,6 @@ app.get("/details", (req, res) => {
 //set the end point auth for all the auth routes
 app.use(authRoutes);
 
-//cookies
-app.get("/set-cookies", (req, res) => {
-  res.cookie("newUser", true, {
-    maxAge: 1000 * 60 * 60 * 24,
-    secure: true,
-    httpOnly: true,
-  });
-  res.cookie("isLoggedIn", false);
-  //res.setHeader("set-Cookie", "nameUser=true");
-  res.send("you got the cookies");
-});
-
-app.get("/read-cookie", (req, res) => {
-  const cookie = req.cookies;
-  console.log(cookie);
-  res.json(cookie);
-});
 const PORT = process.env.PORT;
 app.listen(PORT, () => {
   console.log(

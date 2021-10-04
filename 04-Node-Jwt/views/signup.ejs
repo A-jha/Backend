@@ -17,6 +17,7 @@
       <form class="form card p-2" id="form">
         <div class="m-3">
           <label for="firstName" class="form-lebel">First-Name</label>
+          <p class="text-danger" id="firstNameError"></p>
           <input
             class="w-100"
             id="firstName"
@@ -27,6 +28,7 @@
         </div>
         <div class="m-3">
           <label for="lastName" class="form-lebel">Last-Name</label>
+          <p class="text-danger" id="lastNameError"></p>
           <input
             class="w-100"
             id="lastName"
@@ -37,10 +39,12 @@
         </div>
         <div class="m-3">
           <label for="email" class="form-lebel">Email</label>
+          <p class="text-danger" id="emailError"></p>
           <input class="w-100" id="email" name="email" type="email" required />
         </div>
         <div class="m-3">
           <label for="password" class="form-lebel">Password</label>
+          <p class="text-danger" id="passwordError"></p>
           <input
             class="w-100"
             id="password"
@@ -53,6 +57,7 @@
           <label for="confirmPassword" class="form-lebel"
             >Re-Type Password</label
           >
+          <p class="text-danger" id="confirmPasswordError"></p>
           <input
             class="w-100"
             id="confirmPassword"
@@ -69,7 +74,14 @@
     <%- include("helper/_footer") %>
     <script>
       const form = document.getElementById("form");
-      form.addEventListener("submit", (e) => {
+      const firstNameError = document.getElementById("firstNameError");
+      const lastNameError = document.getElementById("lastNameError");
+      const emailError = document.getElementById("emailError");
+      const passwordError = document.getElementById("passwordError");
+      const confirmPasswordError = document.getElementById(
+        "confirmPasswordError"
+      );
+      form.addEventListener("submit", async (e) => {
         e.preventDefault();
 
         //get values
@@ -80,6 +92,47 @@
         const confirmPassword = form.confirmPassword.value;
 
         console.log(firstName, lastName, email, password, confirmPassword);
+        try {
+          const res = await fetch("/signup", {
+            method: "POST",
+            body: JSON.stringify({
+              firstName,
+              lastName,
+              email,
+              password,
+              confirmPassword,
+            }),
+            headers: { "Content-Type": "application/json" },
+          });
+          const data = await res.json();
+          if (data.firstName) {
+            firstNameError.innerText = data.firstName;
+          } else {
+            firstNameError.innerText = "";
+          }
+          if (data.lastName) {
+            lastNameError.innerText = data.lastName;
+          } else {
+            lastNameError.innerText = "";
+          }
+          if (data.email) {
+            emailError.innerText = data.email;
+          } else {
+            emailError.innerText = "";
+          }
+          if (data.password) {
+            passwordError.innerText = data.password;
+          } else {
+            passwordError.innerText = "";
+          }
+          if (data.confirmPassword) {
+            confirmPasswordError.innerText = data.confirmPassword;
+          } else {
+            confirmPassword.innerText = "";
+          }
+        } catch (error) {
+          console.log(error);
+        }
       });
     </script>
   </body>
