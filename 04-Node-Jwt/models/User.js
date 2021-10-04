@@ -38,8 +38,11 @@ userSchema.path("password").validate(function (v) {
 
 //fire a function before doc is saved
 userSchema.pre("save", async function (next) {
-  this.password = await bcrypt.hash(this.password, 12);
-  this.confirmPassword = await bcrypt.hash(this.confirmPassword, 12);
+  //generate a salt
+  const salt = await bcrypt.genSalt();
+
+  this.password = await bcrypt.hash(this.password, salt);
+  this.confirmPassword = await bcrypt.hash(this.confirmPassword, salt);
   next();
 });
 const User = mongoose.model("users", userSchema);

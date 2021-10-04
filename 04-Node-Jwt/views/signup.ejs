@@ -14,7 +14,73 @@
     <%- include("helper/_header") %>
     <div class="p-5 bg-info bg-opacity-25">
       <h1 class="text-center">Sign-up Form</h1>
+      <form class="form card p-2" id="form">
+        <div class="m-3">
+          <label for="firstName" class="form-lebel">First-Name</label>
+          <input
+            class="w-100"
+            id="firstName"
+            name="firstName"
+            type="text"
+            required
+          />
+        </div>
+        <div class="m-3">
+          <label for="lastName" class="form-lebel">Last-Name</label>
+          <input
+            class="w-100"
+            id="lastName"
+            name="lastName"
+            type="text"
+            required
+          />
+        </div>
+        <div class="m-3">
+          <label for="email" class="form-lebel">Email</label>
+          <input class="w-100" id="email" name="email" type="email" required />
+        </div>
+        <div class="m-3">
+          <label for="password" class="form-lebel">Password</label>
+          <input
+            class="w-100"
+            id="password"
+            name="password"
+            type="password"
+            required
+          />
+        </div>
+        <div class="m-3">
+          <label for="confirmPassword" class="form-lebel"
+            >Re-Type Password</label
+          >
+          <input
+            class="w-100"
+            id="confirmPassword"
+            name="confirmPassword"
+            type="password"
+            required
+          />
+        </div>
+        <div class="" style="margin-left: 2rem">
+          <button class="btn btn-outline-dark">Sign-up</button>
+        </div>
+      </form>
     </div>
     <%- include("helper/_footer") %>
+    <script>
+      const form = document.getElementById("form");
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        //get values
+        const firstName = form.firstName.value;
+        const lastName = form.lastName.value;
+        const email = form.email.value;
+        const password = form.password.value;
+        const confirmPassword = form.confirmPassword.value;
+
+        console.log(firstName, lastName, email, password, confirmPassword);
+      });
+    </script>
   </body>
 </html>
