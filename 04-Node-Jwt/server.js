@@ -11,6 +11,7 @@ const mongoose = require("mongoose");
 const authRoutes = require("./routes/authRoutes");
 
 const ejs = require("ejs");
+const { requireAuth } = require("./middleware/authMiddleware");
 
 //set static file
 app.use(express.static("./public"));
@@ -37,7 +38,7 @@ app.get("/", (req, res) => {
   res.status(200).render("home");
 });
 
-app.get("/details", (req, res) => {
+app.get("/details", requireAuth, (req, res) => {
   res.status(200).render("details");
 });
 //set the end point auth for all the auth routes

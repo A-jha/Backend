@@ -130,6 +130,9 @@
           } else {
             confirmPassword.innerText = "";
           }
+          if (data.user) {
+            location.assign("/");
+          }
         } catch (error) {
           console.log(error);
         }

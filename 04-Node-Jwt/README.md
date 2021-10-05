@@ -227,3 +227,5 @@ It does potentially open up our site to cross site request forgery attack.
 - **Signature**
 
   Makes the token secure (like a stamp of authenticity)
+
+## 🔒 Route Protection

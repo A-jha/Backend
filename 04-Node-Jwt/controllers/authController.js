@@ -12,6 +12,14 @@ const handleError = (err) => {
     firstName: "",
     lastName: "",
   };
+  //incorrect email during login
+  if (err.message === "incorrect email") {
+    errors.email = "sorry email is not registered:(";
+  }
+  //incorrect password during login
+  if (err.message === "Incorrect user password") {
+    errors.password = "Please enter your password carefully.";
+  }
   //check for duplicate error
   if (err.code === 11000) {
     errors["email"] = "this email is already registered!";
@@ -59,8 +67,20 @@ module.exports.login_get = (req, res) => {
   res.render("login");
 };
 
-module.exports.login_post = (req, res) => {
+module.exports.login_post = async (req, res) => {
   const { email, password } = req.body;
-  console.log(email, password);
-  res.send("User authenticated successfully");
+  try {
+    const user = await User.login(email, password);
+    const token = createToke(user._id);
+    res.cookie("jwt", token, { httpOnly: true, maxAge: maxAge });
+    res.status(200).json({ user: user._id });
+  } catch (error) {
+    const errors = handleError(error);
+    res.status(400).json({ errors });
+  }
+};
+
+module.exports.logout_get = async (req, res) => {
+  res.cookie("jwt", "", { maxAge: 1 });
+  res.redirect("/");
 };
